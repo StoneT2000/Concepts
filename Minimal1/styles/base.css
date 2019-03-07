@@ -1,0 +1,156 @@
+:root {
+  --black: #212529;
+  --primary: #fefefe;
+  --secondary: #fefefe;
+}
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html {
+  font-size:16px;
+}
+body{
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 300;
+  background-color: #fefefe;
+  color:#212529;
+  font-family: 'Open Sans';
+  margin: 0px;
+  margin: 20px;
+}
+h1, h2 {
+  font-weight:300;
+}
+h1 {
+  font-size:2.5rem;
+}
+h2 {
+  font-size:2rem;
+}
+.container {
+  width:100%;
+  min-height: 100%;
+  text-align: center; 
+}
+button{
+  border:none;
+}
+button:focus {outline:0;}
+header {
+  width:100%;
+  height:3rem;
+  border-radius:2px;
+  position: sticky;
+  margin-bottom: 2rem;
+  top:.5rem;
+  z-index:9999;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.05);
+  background-color: #fefefe;
+}
+header ul {
+  height: 3rem;
+  padding:0px;
+  display:block;
+  margin:0px;
+}
+header li {
+  list-style-type: none;
+  position: relative;
+  display:inline-block;
+  max-width: 100px;
+  width: 10%;
+  height:2rem;
+  margin-top:0.5rem;
+  text-align: center;
+  margin-left:10px;
+  transition:border-radius .4s, background-color .4s;
+}
+header li a {
+  text-decoration: none;
+  line-height: 2rem;
+  font-size:1rem;
+  width:100%;
+  display:block;
+}
+header li:hover {
+  background-color:rgba(245,245,245);
+  border-radius:4px;
+  cursor:pointer;
+  transition:border-radius .2s, background-color 0.2s;
+}
+/*Table*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color:white;
+  font-weight:300;
+}
+th {
+  text-align: left;
+  padding-left: 1rem;
+  font-weight:400;
+}
+tr {
+  padding:0px;
+  margin:0px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  transition: box-shadow 0.2s;
+  height: 3rem;
+}
+tr:hover {
+  box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.1);
+}
+td {
+  margin:0px;
+  padding:0px;
+  padding-left:1rem;
+}
+
+/*Footer*/
+.footer{
+  position: relative;
+  margin-left:10px;
+  z-index:9999;
+  
+}
+.footer a{
+  color: RGB(52,58,64);
+  margin-left: 5px;
+}
+.footer span{
+  font-size: 12px;
+  font-weight: 400;
+  font-size:12px;
+  vertical-align:text-top;
+}
+.octicon-mark-github, .octicon-mail{
+  fill: RGB(52,58,64);
+  -webkit-transition: fill 0.3s;
+  -o-transition: fill 0.3s;
+  transition: fill 0.3s;
+  vertical-align: text-bottom;
+}
+.octicon-mail {
+  transform: translateY(1px);
+}
+.octicon-mark-github:hover, .octicon-mail:hover{
+  fill: RGB(26,29,32);
+}
+a {
+  color:inherit;
+}
+a:visited {
+  color:inherit;
+}
+@media only screen and (max-width: 600px) {
+  html {
+    font-size:12px;
+  }
+}
+@media only screen and (max-width: 440px) {
+  html {
+    font-size:8px;
+  }
+}
