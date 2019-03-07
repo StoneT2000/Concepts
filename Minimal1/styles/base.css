@@ -100,6 +100,7 @@ header li a {
   font-size:1rem;
   width:100%;
   display:block;
+  border: none;
   transition:border-radius .2s, background-color 0.2s, color 0.2s;
 }
 header li:hover {
@@ -266,6 +267,7 @@ form textarea {
 .footer a{
   color: var(--text);
   margin-left: 5px;
+  border: none;
 }
 .footer span{
   font-size: 12px;
@@ -291,6 +293,14 @@ a {
 }
 a:visited {
   color:inherit;
+}
+a {
+  text-decoration: none;
+  border-bottom: 2px solid;
+  transition: border-bottom 0.1s;
+}
+a:hover {
+  border-width: 4px;
 }
 @media only screen and (max-width: 800px) {
   html {

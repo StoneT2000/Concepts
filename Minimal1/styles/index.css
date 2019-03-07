@@ -1,8 +1,10 @@
 .displayModules-1 > a {
   text-decoration: none;
+  border: none;
 }
 .displayModules-3 > a{
   text-decoration: none;
+  border: none;
 }
 .displayModules-3 {
   display:flex;
