@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Minimal 1</title>
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/index.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="styles/buttons.css">
+  <script src="scripts/jquery-3.3.1.min.js"></script>
+  <script src="scripts/base.js"></script>
 </head>
 
 <body>
@@ -14,13 +17,31 @@
     <h1 style='text-align: center;position: absolute;bottom:0px;width:100%'>&lt;insert slick name&gt.io</h1>
   </div>
   <header>
-    <ul>
-      <li><a href="#">Home</a></li>
+    <ul class='links'>
+      <li class='link'><a href="#">Home</a></li>
       <li><a href="#m1column">Stuff-1</a></li>
       <li><a href="#ncolumn">Stuff-N</a></li>
       <li><a href="#docs">Docs</a></li>
       <li><a href="#metrics">Metrics</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <ul class='dropdownLinksWrapper' id="colorDropdownWrapper">
+        <li class='dropdownTitle' id='colorDropdown'>
+          <div class='rightTriangle'></div>
+          <div>Themes</div>
+        </li>
+        <div class="dropdownLinks">
+          <li  id='theme-default'><a>Default</a></li>
+          <li class='choiceSelected' id='theme-red'><a>Red</a></li>
+          <li id='theme-orange'><a>Orange</a></li>
+          <li id='theme-green'><a>Green</a></li>
+        </div>
+      </ul>
+      <div style='float:right;width:200px;max-width:200px;line-height: 3rem;font-weight:400;'>
+        &lt;insert slick name&gt.io
+      </div>
+    </ul>
+    <ul>
+
     </ul>
   </header>
   <div style="height:calc(50vh - 6rem); position: relative">
@@ -59,118 +80,148 @@
       <h2>N-Column Modules</h2>
       <div class="displayModules-3">
         <a href="#ncolumn">
-        <div class="module-3">
-          <div class="content-image-3">
-            <img src="images/coffee.svg">
+          <div class="module-3">
+            <div class="content-image-3">
+              <img src="images/planet.svg">
+            </div>
+            <div class="content-text-3">
+              <h3 class="content-title-3">Space Ipsum</h3>
+              <p class="content-desc-3"> The regret on our side is, they used to say years ago, we are reading about you in science class. Now they... </p>
+            </div>
           </div>
-          <div class="content-text-3">
-            <h3 class="content-title-3">Coffee Ipsum</h3>
-            <p class="content-desc-3"> Ipsumish Caption Here</p>
-          </div>
-        </div>
         </a>
         <a href="#ncolumn">
-        <div class="module-3">
-          <div class="content-image-3">
-            <img src="images/coffee.svg">
+          <div class="module-3">
+            <div class="content-image-3">
+              <img src="images/physics.png" style='width:100px;height100px;'>
+            </div>
+            <div class="content-text-3">
+              <h3 class="content-title-3">Heisenburg Ipsum</h3>
+              <p class="content-desc-3" style='text-overflow: ellipsis;overflow-y: hidden;'>No! You don't even believe that! Gus has cameras everywhere, please. Listen to yourself! No, he has known everything... </p>
+            </div>
           </div>
-          <div class="content-text-3">
-            <h3 class="content-title-3">Coffee Ipsum</h3>
-            <p class="content-desc-3"> Ipsumish Caption Here</p>
-          </div>
-        </div>
         </a>
         <a href="#ncolumn">
-        <div class="module-3">
-          <div class="content-image-3">
-            <img src="images/coffee.svg">
+          <div class="module-3">
+            <div class="content-image-3">
+              <img src="images/coffee.svg">
+            </div>
+            <div class="content-text-3">
+              <h3 class="content-title-3">日本語 Ipsum</h3>
+              <p class="content-desc-3"> イルカは人間に次いで最も知能が高く、やがては彼らとの対話も夢ではないと考えている科学者もいる。。。</p>
+            </div>
           </div>
-          <div class="content-text-3">
-            <h3 class="content-title-3">Coffee Ipsum</h3>
-            <p class="content-desc-3"> Ipsumish Caption Here</p>
-          </div>
-        </div>
         </a>
         <a href="#ncolumn">
-        <div class="module-3">
-          <div class="content-image-3">
-            <img src="images/zencat.png">
+          <div class="module-3">
+            <div class="content-image-3">
+              <img src="images/zencat.png">
+            </div>
+            <div class="content-text-3">
+              <h3 class="content-title-3">Cat Ipsum 2</h3>
+              <p class="content-desc-3"> I just saw other cats inside the house and nobody ask me before using my litter box run around the house at 4...</p>
+            </div>
           </div>
-          <div class="content-text-3">
-            <h3 class="content-title-3">Coffee Ipsum</h3>
-            <p class="content-desc-3"> Ipsumish Caption Here</p>
-          </div>
-        </div>
         </a>
         <a href="#ncolumn">
-        <div class="module-3">
-          <div class="content-image-3">
-            <img src="images/coffee.svg">
+          <div class="module-3">
+            <div class="content-image-3">
+              <img src="images/coffee.svg">
+            </div>
+            <div class="content-text-3">
+              <h3 class="content-title-3">Coffee Ipsum</h3>
+              <p class="content-desc-3"> Ipsumish Caption Here</p>
+            </div>
           </div>
-          <div class="content-text-3">
-            <h3 class="content-title-3">Coffee Ipsum</h3>
-            <p class="content-desc-3"> Ipsumish Caption Here</p>
-          </div>
-        </div>
         </a>
         <a href="#ncolumn">
-        <div class="module-3">
-          <div class="content-image-3">
-            <img src="images/coffee.svg">
+          <div class="module-3">
+            <div class="content-image-3">
+              <img src="images/coffee.svg">
+            </div>
+            <div class="content-text-3">
+              <h3 class="content-title-3">Coffee Ipsum</h3>
+              <p class="content-desc-3"> Sorry, got too lazy to copy more ipsums...</p>
+            </div>
           </div>
-          <div class="content-text-3">
-            <h3 class="content-title-3">Coffee Ipsum</h3>
-            <p class="content-desc-3"> Ipsumish Caption Here</p>
-          </div>
-        </div>
         </a>
       </div>
+      <button class="button button-primary" id='whereIpsum'>Where can I find more ipsums?</button>
       <div class='divider' id="docs"></div>
       <h2>Documentation</h2>
-      <code>function foo() {}</code>
+      <div style="text-align: left; width:80%;margin-left:10%;">
+        <label>Do this:</label>
+        <code>
+          1 function foo() {
+          <br>
+          2 if (design == minimal) {
+          <br>
+          3 console.log(':)');
+          <br>
+          4 }
+          <br>
+          5 }
+        </code>
+        <br>
+        <label>Don't Do this:</label>
+        <code>
+          1 function foo() {
+          <br>
+          2 if (design == minimal) {
+          <br>
+          3 Perform 2^13 random operations to de-minimalize
+          <br>
+          4 }
+          <br>
+          5 }
+        </code>
+      </div>
       <div class='divider' id="metrics"></div>
       <h2>Metrics</h2>
       <div class="table-wrapper" style="margin-left:10%;width:80%">
-      <table>
-        <th>Font Name</th>
-        <th>Percent Usage on Web</th>
-        <th>1 Year Change</th>
-        <tr>
-          <td>Roboto</td>
-          <td>25.6%</td>
-          <td>33%</td>
-        </tr>
-        <tr>
-          <td>Open Sans</td>
-          <td>21.0%</td>
-          <td>3%</td>
-        </tr>
-        <tr>
-          <td>Lato</td>
-          <td>5.3%</td>
-          <td>2%</td>
-        </tr>
-        <tr>
-          <td>Slabo 27px</td>
-          <td>3.5%</td>
-          <td>4%</td>
-        </tr>
-        <tr>
-          <td>Oswald</td>
-          <td>3.5%</td>
-          <td>9%</td>
-        </tr>
-      </table>
+        <table>
+          <tr style="box-shadow:none;">
+            <th>Font Name</th>
+            <th>Percent Usage on Web</th>
+            <th>1 Year Change</th>
+          </tr>
+          <tr>
+            <td>Roboto</td>
+            <td>25.6%</td>
+            <td>33%</td>
+          </tr>
+          <tr>
+            <td>Open Sans</td>
+            <td>21.0%</td>
+            <td>3%</td>
+          </tr>
+          <tr>
+            <td>Lato</td>
+            <td>5.3%</td>
+            <td>2%</td>
+          </tr>
+          <tr>
+            <td>Slabo 27px</td>
+            <td>3.5%</td>
+            <td>4%</td>
+          </tr>
+          <tr>
+            <td>Oswald</td>
+            <td>3.5%</td>
+            <td>9%</td>
+          </tr>
+        </table>
       </div>
-      <div class='divider'></div>
+      <button class="button button-secondary" style="width:100px;margin-top:2em;" id="findStats">Cool!</button>
+      <div class='divider' id="contact"></div>
       <h2>Contact Us</h2>
       <div style="width: 30%;margin:auto;min-width:300px;">
-        <form>
+        <form action=''>
           <label>Name</label>
           <input type="text">
           <label>Comment</label>
           <textarea></textarea>
-          <button class="form-button">Submit</button>
+          <div class="button button-primary" id='submit' style='text-align: center;'>Submit</div>
         </form>
       </div>
       <div class='divider'></div>
@@ -181,10 +232,21 @@
   <footer class="footer">
     <span style="margin-right:4px;">By Stone T. @ Github</span><a href="https://github.com/StoneT2000"><svg height="24" width="24" class="octicon octicon-mark-github" viewBox="0 0 20 20" version="1.1" aria-hidden="true">
         <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
-      </svg></a><span style="border-right: 1px solid #212529;margin:0px 10px 0px 10px;"></span><span style="margin-right:4px;">Email</span><a href="mailto:stoneztao@gmail.com"><svg width="28" height="28" class="octicon octicon-mail" viewBox="0 0 20 18" version="1.1" aria-hidden="true">
+      </svg></a><span style="border-right: 1px solid;margin:0px 10px 0px 10px;"></span><span style="margin-right:4px;">Email</span><a href="mailto:stoneztao@gmail.com"><svg width="28" height="28" class="octicon octicon-mail" viewBox="0 0 20 18" version="1.1" aria-hidden="true">
         <path fill-rule="evenodd" d="M0 4v8c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H1c-.55 0-1 .45-1 1zm13 0L7 9 1 4h12zM1 5.5l4 3-4 3v-6zM2 12l3.5-3L7 10.5 8.5 9l3.5 3H2zm11-.5l-4-3 4-3v6z"></path>
       </svg></a>
   </footer>
+  <div class='popup' id='popup-1'>
+    <div class='popup-module'>
+      <div class="popup-module-topbar">
+        <span class='popup-title'>Lorem</span>
+        <div class="closebtn" id="closePopup-1">
+          <div class="sm-close"></div>
+        </div>
+      </div>
+      <p class='popup-content'>Ipsum</p>
+    </div>
+  </div>
 </body>
 
 </html>

@@ -1,7 +1,26 @@
 :root {
-  --black: #212529;
-  --primary: #fefefe;
-  --secondary: #fefefe;
+  --black:#212529;
+  --text: #212529;
+  --text2nd: #494c4f;
+  --bg:#fefefe;
+  --bg2:#212529;
+  --primary: rgb(230,230,230);
+  --primaryHover: rgb(127,127,127);
+  --primaryActive:#212529;
+  --secondary: rgb(33,37,41);
+  --secondaryHover: rgb(33,37,41);
+  
+  /*Red Style*/
+  --text:#fefefe;
+  --text2nd: #f2f2f2;
+  --bg:#f52f57;
+  --bg2:#f52f57;
+  --primary: #df2b50; /*3 levels down*/
+  --primaryHover: #b32340; /* 5 down*/
+  --primaryActive:#861a30; /* 7 down*/
+  --secondary: #fafafc;
+  --secondaryHover: #fafafc;
+  --secondaryActive:#f5f5f9;
 }
 * {
   box-sizing: border-box;
@@ -14,11 +33,12 @@ body{
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-weight: 300;
-  background-color: #fefefe;
-  color:#212529;
+  background-color: var(--bg);
+  color:var(--text);
   font-family: 'Open Sans';
   margin: 0px;
   margin: 20px;
+  transition:background-color 0.8s;
 }
 h1, h2 {
   font-weight:300;
@@ -38,6 +58,7 @@ button{
   border:none;
 }
 button:focus {outline:0;}
+/*Header*/
 header {
   width:100%;
   height:3rem;
@@ -48,6 +69,7 @@ header {
   z-index:9999;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.05);
   background-color: #fefefe;
+  color:#212529;
 }
 header ul {
   height: 3rem;
@@ -59,13 +81,18 @@ header li {
   list-style-type: none;
   position: relative;
   display:inline-block;
+  background-color: #fefefe;
   max-width: 100px;
   width: 10%;
   height:2rem;
   margin-top:0.5rem;
   text-align: center;
   margin-left:10px;
+  border-radius:4px;
   transition:border-radius .4s, background-color .4s;
+}
+header li a:active {
+  outline: none;
 }
 header li a {
   text-decoration: none;
@@ -73,22 +100,69 @@ header li a {
   font-size:1rem;
   width:100%;
   display:block;
+  transition:border-radius .2s, background-color 0.2s, color 0.2s;
 }
 header li:hover {
-  background-color:rgba(245,245,245);
-  border-radius:4px;
+  background-color:var(--bg2);
+  color:#fefefe;
   cursor:pointer;
-  transition:border-radius .2s, background-color 0.2s;
+}
+.choiceSelected {
+  background-color:var(--bg2);
+  color:#fefefe;
+  cursor:pointer;
+}
+.dropdownLinksWrapper {
+  height:3rem;
+  top:0px;
+  display:inline-block;
+  vertical-align:top;
+  overflow-y: hidden;
+  background-color:white;
+  width:10%;
+  padding-left:1rem;
+  max-width:120px;
+  min-width:120px;
+  transition: height 0.6s, box-shadow 0.4s;
+  border-radius:4px;
+  box-shadow: 0px 0px 0px -10px rgba(0,0,0,0.1);
+}
+.dropdownLinksWrapper li {
+  display:block;
+  width:100%;
+  margin-left:1rem;
+  width:84px;
+  text-align: center;
+}
+.choiceSelected::before {
+  content:url('../images/checkmark.svg');
+  left:-2rem;
+  width:2rem;
+  height:2rem;
+  position: absolute;
+}
+
+.dropdownTitle {
+  line-height: 2rem;
+}
+/*Code Blocks*/
+code {
+  text-align: left !important;
+  background-color: var(--text);
+  display:block;
+  color:var(--bg);
+  padding:1rem;
+  border-radius: 4px;
 }
 /*Table*/
 table {
   width: 100%;
   border-collapse: collapse;
-  background-color:white;
+  background-color:var(--bg);
   font-weight:300;
 }
 th {
-  text-align: left;
+  text-align: center;
   padding-left: 1rem;
   font-weight:400;
 }
@@ -113,50 +187,84 @@ form {
   text-align: left;
   font-size:1.25rem;
   font-weight:300;
+  padding:1rem;
 }
 form label {
-  font-size:1.5rem;
-  margin: 1rem;
+  font-size:1.25rem;
 }
 form input, form textarea {
   display:block;
   width:100%;
   border:none;
   font-family: 'Open Sans';
-  margin:1rem;
+  margin-top: 1rem;
+  margin-bottom:1rem;
   font-size:inherit;
   font-weight:inherit;
   height:2rem;
+  font-size:1rem;
 }
 form input {
-  border-bottom: 2px solid rgba(0,0,0,0.1);
+  border-top-right-radius:4px;
+  border-top-left-radius:4px;
+  padding:0.5rem;
+  border-bottom: 2px solid var(--primary);
   transition: border-bottom 0.2s;
 }
-form input:focus {
-  border-bottom: 2px solid rgba(0,0,0,0.5);
+form textarea:hover, form input:hover {
+  border-color: var(--primaryHover);
+}
+form input:focus, form textarea:focus {
+  border-color:var(--primaryActive);
 }
 form textarea {
   border-radius:4px;
-  height: 5rem;
+  height: 7rem;
   padding: 0.5rem;
-  border: 2px solid rgba(0,0,0,0.1);
+  border: 2px solid var(--primary);
   transition: border 0.2s;
   width:100% !important;
-}
-form textarea:focus {
-  border: 2px solid rgba(0,0,0,0.5);
+  resize:none;
 }
 /*Buttons*/
-
+.button {
+  padding:10px;
+  font-size:1rem;
+  color:var(--text);
+  background-color:var(--bg);
+  border-radius: 4px;
+  cursor:pointer;
+  font-size: 1rem;
+  font-weight: 300;
+  transition: border-color 0.2s, background-color 0.2s, color 0.2s;
+}
+.button-primary:hover {
+  border-color: var(--primaryHover);
+}
+.button-primary:active {
+  border-color: var(--primaryActive);
+}
+.button-primary {
+  border: 2px solid var(--primary);
+}
+.button-secondary {
+  border: 2px solid var(--secondary);
+}
+.button-secondary:hover {
+  border-color: var(--secondaryHover);
+  background-color: var(--secondaryHover);
+  color: var(--bg);
+}
+.button-secondary:active {
+}
 /*Footer*/
 .footer{
   position: relative;
   margin-left:10px;
   z-index:9999;
-  
 }
 .footer a{
-  color: RGB(52,58,64);
+  color: var(--text);
   margin-left: 5px;
 }
 .footer span{
@@ -166,7 +274,7 @@ form textarea:focus {
   vertical-align:text-top;
 }
 .octicon-mark-github, .octicon-mail{
-  fill: RGB(52,58,64);
+  fill: var(--text);
   -webkit-transition: fill 0.3s;
   -o-transition: fill 0.3s;
   transition: fill 0.3s;
@@ -176,7 +284,7 @@ form textarea:focus {
   transform: translateY(1px);
 }
 .octicon-mark-github:hover, .octicon-mail:hover{
-  fill: RGB(26,29,32);
+  fill: var(--text2nd);
 }
 a {
   color:inherit;
@@ -184,7 +292,7 @@ a {
 a:visited {
   color:inherit;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   html {
     font-size:12px;
   }
