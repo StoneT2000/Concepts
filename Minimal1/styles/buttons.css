@@ -14,13 +14,19 @@
   width: 1.8rem;
   border-radius: 4px;
   height: 0.2rem;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
   transform-origin: center;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   background-color: inherit;
   z-index:999;
 }
 
 .sm-close::after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
@@ -35,6 +41,8 @@
   left: calc(100% - 2.5rem);
   width: 1.8rem;
   height: 1.8rem;
+  -webkit-transition: background-color 0.2s, border-radius 0.2s;
+  -o-transition: background-color 0.2s, border-radius 0.2s;
   transition: background-color 0.2s, border-radius 0.2s;
   border-radius:50%;
 }
@@ -47,6 +55,8 @@
   top:calc(50% - 0.3rem);
   border-radius:50%;
   background-color:rgba(0,0,0,0.15);
+  -webkit-transition:width 0.2s, height 0.2s, left 0.2s, top 0.2s;
+  -o-transition:width 0.2s, height 0.2s, left 0.2s, top 0.2s;
   transition:width 0.2s, height 0.2s, left 0.2s, top 0.2s;
 }
 .closebtn:hover::after {
@@ -69,6 +79,10 @@
   border-top: 0.5rem solid transparent;
   border-bottom: 0.5rem solid transparent;
   border-left: 0.5rem solid #212529;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
   transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
   /*border-left-color:inherit;*/
 }
