@@ -304,11 +304,11 @@ a:hover {
 }
 @media only screen and (max-width: 800px) {
   html {
-    font-size:12px;
+    font-size:14px;
   }
 }
 @media only screen and (max-width: 440px) {
   html {
-    font-size:8px;
+    font-size:14px;
   }
 }
