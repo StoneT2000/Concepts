@@ -35,7 +35,7 @@ body{
   font-weight: 300;
   background-color: var(--bg);
   color:var(--text);
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   margin: 0px;
   margin: 20px;
   transition:background-color 0.8s;
