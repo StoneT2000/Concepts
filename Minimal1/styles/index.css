@@ -16,6 +16,8 @@
   -ms-flex-pack: center;
   justify-content: center;
   margin-bottom: 4rem;
+  width: 100%;
+ 
 }
 .module-1, .module-3 {
   background-color:#fefefe;
@@ -42,17 +44,28 @@
   -ms-transform: scale(1.01);
   transform: scale(1.01);
 }
+.displayModules-3 a {
+  width:33%;
+}
 .module-3 {
   height:inherit;
   padding:0.8rem;
+}
+@media only screen and (max-width: 1000px) {
+  .displayModules-3 a {
+    width:45%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .displayModules-3 a {
+    width:100%;
+  }
 }
 .module-1 {
   padding:1rem;
   margin-bottom:4rem;
 }
 .displayModules-3 a {
-  min-width:300px;
-  width:calc(30% - 0.5rem);
   height:14rem;
   padding:1rem;
   margin-bottom:1rem;
