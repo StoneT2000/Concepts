@@ -98,7 +98,7 @@ $(document).ready(function(){
   });
   $("#submit").on('click', function(){
     popup("#popup-1","Submitted", "Just kidding, nothing got submitted...");
-  })
+  });
   //setup themes
   for (let theme of themes) {
     $("#theme-" + theme).on('click', function(){
