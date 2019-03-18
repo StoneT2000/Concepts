@@ -1,4 +1,5 @@
 var colorDropdown = false;
+var menuDropdown = false;
 var themes = ["default","red","orange","green"];
 var themeProperties = {
   default: [  
@@ -62,6 +63,19 @@ $(document).ready(function(){
       $("#colorDropdownWrapper").css("height", "3rem");
       $("#colorDropdown .rightTriangle").css("transform", "rotate(0deg)");
       $("#colorDropdownWrapper").css("box-shadow","0px 0px 0px -10px rgba(0,0,0,0.1)")
+    }
+    
+  });
+  $("#menuDropdownWrapper").on('click', function(){
+    if (menuDropdown === false){
+      menuDropdown = true;
+      $("#menuWrapper").css("height", "18rem");
+      $("#menuWrapper").css("box-shadow","0px 8px 12px -4px rgba(0,0,0,0.1)")
+    }
+    else {
+      menuDropdown = false;
+      $("#menuWrapper").css("height", "3rem");
+      $("#menuWrapper").css("box-shadow","0px 0px 0px -10px rgba(0,0,0,0.1)")
     }
     
   });

@@ -1,8 +1,8 @@
+/*Cool closing button*/
 .sm-close {
   background-color: #fefefe;
   width: 2rem;
 }
-
 .sm-close::before,
 .sm-close::after {
   content: '';
@@ -69,7 +69,6 @@
 
 
 }
-
 .rightTriangle {
   width: 0; 
   height: 0; 
