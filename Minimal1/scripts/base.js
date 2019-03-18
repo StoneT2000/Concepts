@@ -50,8 +50,7 @@ var themeProperties = {
   '--secondaryActive: #f5f5f9'
   ]
 }
-$(document).ready(function(){
-  $("#colorDropdown").on('click', function(){
+function toggleThemeDropDown() {
     if (colorDropdown === false){
       $("#colorDropdown .rightTriangle").css("transform", "rotate(90deg)");
       colorDropdown = true;
@@ -64,9 +63,8 @@ $(document).ready(function(){
       $("#colorDropdown .rightTriangle").css("transform", "rotate(0deg)");
       $("#colorDropdownWrapper").css("box-shadow","0px 0px 0px -10px rgba(0,0,0,0.1)")
     }
-    
-  });
-  $("#menuDropdownWrapper").on('click', function(){
+}
+function toggleMenuDropDown() {
     if (menuDropdown === false){
       menuDropdown = true;
       $("#menuWrapper").css("height", "18rem");
@@ -77,8 +75,18 @@ $(document).ready(function(){
       $("#menuWrapper").css("height", "3rem");
       $("#menuWrapper").css("box-shadow","0px 0px 0px -10px rgba(0,0,0,0.1)")
     }
-    
+}
+$(document).ready(function(){
+  $("#colorDropdown").on('click', function(){
+    toggleThemeDropDown();
   });
+  $('.dropdownLinks').on('click', function(){
+    toggleThemeDropDown();
+  });
+  
+  $("#menuWrapper li").on('click', function(){
+    toggleMenuDropDown();
+  })
   $("#closePopup-1").on('click', function(){
     popdown("#popup-1");
   })
