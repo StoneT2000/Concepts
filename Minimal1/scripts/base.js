@@ -85,7 +85,9 @@ $(document).ready(function(){
   });
   
   $("#menuWrapper li").on('click', function(){
-    toggleMenuDropDown();
+    if (window.innerWidth <= 660){
+      toggleMenuDropDown();
+    }
   })
   $("#closePopup-1").on('click', function(){
     popdown("#popup-1");
