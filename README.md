@@ -42,3 +42,23 @@ Minimal - 1
   - [ ] Bottom Cookies
 - [ ] Random Content
 - [ ] Links
+
+Style/Designer Brand - 1
+
+- [ ] Header
+- [ ] Container
+- [ ] Tables
+- [ ] Buttons
+- [ ] Color Schemes
+  - [ ] Main Scheme
+  - [ ] Additional
+- [ ] Code Blocks
+- [ ] Forms
+- [ ] Footer
+- [ ] Modules (1 column modules, n-column modules)
+- [ ] Alert Modules
+  - [ ] Center
+  - [ ] Bottom Cookies
+- [ ] Random Content
+- [ ] Links
+
