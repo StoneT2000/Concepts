@@ -81,17 +81,18 @@ header {
 header ul {
   height: 3rem;
   padding:0px;
-  display:block;
+  display:inline-block;
   margin:0px;
+  transition: height 0.4s;
 }
 header li {
   list-style-type: none;
   position: relative;
   display:inline-block;
   background-color: #fefefe;
-  max-width: 100px;
-  width: 10%;
   height:2rem;
+  padding-right:10px;
+  padding-left:10px;
   margin-top:0.5rem;
   text-align: center;
   margin-left:10px;
@@ -253,6 +254,17 @@ form textarea {
   resize:none;
 }
 /*Buttons*/
+.menubtn {
+  width:2.5rem;
+  height:2.5rem;
+  background-image: url(../images/ios-menu.svg);
+  margin-left: 0.5rem;
+  margin-top: -0.25rem;
+  display: none;
+}
+.menubtnwrapper {
+  display:none;
+}
 .button {
   padding:10px;
   font-size:1rem;
@@ -332,6 +344,30 @@ a {
 }
 a:hover {
   border-width: 4px;
+}
+@media only screen and (max-width: 660px) {
+  header ul {
+    background-color:white;
+    display:inline-block;
+    height:auto;
+    border-radius: 4px;
+    padding-bottom: 0.5rem;
+    padding-right:10px;
+    overflow-y:hidden;
+    height:3rem;
+  }
+  header li {
+    display: block;
+  }
+  header .menubtn {
+    display:block;
+  }
+  .menubtnwrapper {
+    display:block;
+  }
+  .menubtnwrapper:hover {
+    background-color: #fefefe;
+  }
 }
 @media only screen and (max-width: 800px) {
   html {
